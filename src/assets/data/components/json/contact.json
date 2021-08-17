@@ -1,0 +1,17 @@
+{
+  "contact": {
+    "address": ["Vesterbackantie 84", "01120 Västerskog"],
+    "phone": "+358407578626",
+    "email": "manne@helppoelama.net",
+    "url": [
+      {
+        "title": "GitHub",
+        "url": "https://github.com/Nastradoomus/"
+      },
+      {
+        "title": "Helppo Elämä",
+        "url": "https://helppoelämä.fi"
+      }
+    ]
+  }
+}

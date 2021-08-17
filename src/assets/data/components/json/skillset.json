@@ -1,0 +1,92 @@
+[
+  {
+    "titles": [
+      {
+        "title": "TypeScript",
+        "url": "https://www.typescriptlang.org/"
+      },
+      {
+        "title": "JavaScript",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      }
+    ],
+    "rating": 3.5,
+    "content": "TypeScript kiinnostaa erityisen paljon. Pystyn työskentelemään sujuvasti eri kirjastojen parissa joko funktionaalisesti tai luokkapohjaisesti."
+  },
+  {
+    "titles": [
+      {
+        "title": "PHP",
+        "url": "https://www.php.net/"
+      }
+    ],
+    "rating": 3.5,
+    "content": "PHP oli ensikosketus www -ohjelmointiin. Suoraviivainen ja selkeä kieli johon palaa aina mielellään uudestaan."
+  },
+  {
+    "titles": [
+      {
+        "title": "HTML",
+        "url": "https://www.w3.org/html/"
+      },
+      {
+        "title": "CSS",
+        "url": "https://www.w3.org/Style/CSS/"
+      }
+    ],
+    "rating": 4.5,
+    "content": "Vaikka ei viimeisimmät CSS kikat luonnistu ulkomuistista niin aina yritän parhaani mukaan pysyä viimeisten trendien mukana."
+  },
+  {
+    "titles": [
+      {
+        "title": "TypeScript",
+        "url": "https://www.typescriptlang.org/"
+      },
+      {
+        "title": "JavaScript",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      }
+    ],
+    "rating": 3.5,
+    "content": "TypeScript kiinnostaa erityisen paljon. Pystyn työskentelemään sujuvasti eri kirjastojen parissa joko funktionaalisesti tai luokkapohjaisesti."
+  },
+  {
+    "titles": [
+      {
+        "title": "Python",
+        "url": "https://www.python.org/"
+      },
+      {
+        "title": "ASP.NET Core",
+        "url": "https://docs.microsoft.com/en-us/aspnet/core/"
+      }
+    ],
+    "rating": 2.5,
+    "content": "Pythonista sekä ASP.NET Coresta on perustaidot hallussa. Ei ongelmia opiskella lisää tarvittaessa. ASP.NET muistuttaa paljon TypeScriptiä ja Python on aika suoraviivaista."
+  },
+  {
+    "titles": [
+      {
+        "title": "Mobile First",
+        "url": null
+      }
+    ],
+    "rating": 4,
+    "content": null
+  },
+  {
+    "titles": [
+      {
+        "title": "MySQL",
+        "url": "https://www.mysql.com/"
+      },
+      {
+        "title": "Tietokannat",
+        "url": "https://towardsdatascience.com/top-10-databases-to-use-in-2021-d7e6a85402ba"
+      }
+    ],
+    "rating": 3,
+    "content": null
+  }
+]
