@@ -2,4 +2,4 @@
 
 ## Vue 3 + Typescript + Vite + TailwindCSS
 
-### Airbnb, Prettier, Lint on Save
+### Airbnb, ESLint, Prettier, Vetur

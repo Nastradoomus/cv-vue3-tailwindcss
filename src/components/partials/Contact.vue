@@ -29,7 +29,7 @@
       :data-domain="email.domain"
       :data-tld="email.tld"
       @click="$emailSpamProtect(email.name, email.domain, email.tld)"
-    >
+      >{{ email.name }}(at){{ email.domain }}.{{ email.tld }}
     </a>
     <h3>Verkko</h3>
     <a v-for="(w, i) in contact.web" :key="i" :href="w.url" class="block pl-1">

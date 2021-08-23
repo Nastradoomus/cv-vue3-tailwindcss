@@ -2,17 +2,23 @@
   <div class="pb-3 pt-1">
     <h2 class="text-center">Osaaminen</h2>
     <div class="sm:flex sm:flex-wrap sm:justify-center pb-3 pt-1">
-      <div v-for="skill in skillset" :key="skill.titles[0].title" class="text-center cell sm:m-2">
-        <span v-for="(title, i) in skill.titles" :key="i" class="text-lg font-bold pt-2 pb-1">
+      <div
+        v-for="(skill, i) in skillset"
+        :key="skill.titles[0].title"
+        class="text-center cell mt-3 mb-1 sm:mx-2"
+        :class="{ lastChild: i == skillset.length - 1 }"
+      >
+        <span v-for="(title, y) in skill.titles" :key="y" class="text-lg font-bold pt-3 pb-1">
           <a v-if="title.url" :href="title.url">{{ title.title }}</a>
           <span v-else>{{ title.title }}</span>
-          <span v-if="i < skill.titles.length - 1"> / </span>
+          <span v-if="y < skill.titles.length - 1"> / </span>
         </span>
-        <div class="grid justify-items-center -mt-2 -mb-1">
+        <div v-if="skill.rating" class="grid justify-items-center -mt-2 -mb-1">
           <div class="stars" :style="setLevel(skill.rating)">
             &starf;&starf;&starf;&starf;&starf;
           </div>
         </div>
+        <div v-else>&nbsp;</div>
         <div class="text-left" v-html="skill.content"></div>
       </div>
     </div>
@@ -65,5 +71,9 @@ export default defineComponent({
 
 .cell {
   flex: 0 0 calc(45%);
+}
+
+.lastChild {
+  flex: 100;
 }
 </style>

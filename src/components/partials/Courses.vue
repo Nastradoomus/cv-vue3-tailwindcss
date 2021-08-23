@@ -1,9 +1,9 @@
 <template>
   <div class="pb-3 pt-1">
     <h2 class="text-center pb-1">Syventävät opinnot</h2>
-    <div v-for="course in courses" :key="course.title">
-      <!--<h2 class="text-center pb-1">{{ course.title }}</h2>-->
-      <table class="table-auto">
+    <div v-for="(course, i) in courses" :key="i" class="flex flex-col">
+      <div class="text-center pb-1" v-html="course.preface" />
+      <table class="table-auto text-xs sm:text-base">
         <thead>
           <tr class="font-bold text-left">
             <th>Koulu</th>
@@ -13,7 +13,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(c, i) in course.courses" :key="i">
+          <tr v-for="c in course.courses" :key="c.course">
             <td class="font-bold">
               {{ c.school }}
             </td>
@@ -53,6 +53,7 @@ th {
 }
 td,
 th {
-  @apply p-2;
+  @apply p-1 sm:p-2;
+  hyphens: auto;
 }
 </style>

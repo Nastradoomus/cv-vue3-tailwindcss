@@ -7,6 +7,7 @@ import { skillset, Skillset } from "./components/skillset"
 import { experience, Experience } from "./components/experience"
 import { courses, Courses } from "./components/courses"
 import { personal, Personal } from "./components/personal"
+import { tags, Tags } from "./components/tags"
 
 export interface Data {
   main: Main
@@ -18,6 +19,7 @@ export interface Data {
   experience: Experience
   courses: Courses
   personal: Personal
+  tags(): Tags
 }
 
 export const data: Data = {
@@ -29,5 +31,6 @@ export const data: Data = {
   skillset,
   experience,
   courses,
-  personal
+  personal,
+  tags
 }

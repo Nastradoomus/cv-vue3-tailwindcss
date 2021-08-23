@@ -7,7 +7,7 @@ interface Course {
 }
 
 interface Degree {
-  title: string
+  preface: string
   courses: Course[]
 }
 
@@ -15,7 +15,12 @@ export type Courses = Degree[]
 
 export const courses: Courses = [
   {
-    title: "AMKoodari",
+    preface:
+      "Kaikki kurssit on suoritettu <a href='https://amkoodari.fi/'>AMKoodarin</a> kautta. Selvitän mahdollisuutta yhdistää eri opinnot " +
+      "yhdeksi kokonaisuudeksi." +
+      "<br />" +
+      "Tarkoitus on myös jatkaa omaehtoista opiskelua syksyllä 2021. " +
+      "Aina kun <a href='https://code.visualstudio.com/'>VSCode</a> on auki tulee myös muuten jotain uutta opittua.",
     courses: [
       {
         school: "XAMK",

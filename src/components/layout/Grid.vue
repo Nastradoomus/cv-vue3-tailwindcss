@@ -12,13 +12,17 @@
     </div>
     <div class="md:flex-1 md:ml-2">
       <Skillset />
-      <Portfolio />
-      <Experience />
     </div>
   </div>
   <div class="flex flex-col justify-center items-center">
+    <Portfolio />
+    <Experience />
     <Courses />
     <Personal />
+    <Tags />
+  </div>
+  <div class="text-center">
+    <a href="https://github.com/Nastradoomus/cv-vue3-tailwindcss">Lähdekoodit GitHubissa</a>
   </div>
 </template>
 
@@ -33,6 +37,7 @@ import Portfolio from "../partials/Portfolio.vue"
 import Experience from "../partials/Experience.vue"
 import Courses from "../partials/Courses.vue"
 import Personal from "../partials/Personal.vue"
+import Tags from "../partials/Tags.vue"
 
 export default defineComponent({
   name: "Grid",
@@ -45,7 +50,8 @@ export default defineComponent({
     Portfolio,
     Experience,
     Courses,
-    Personal
+    Personal,
+    Tags
   },
   props: {
     components: {

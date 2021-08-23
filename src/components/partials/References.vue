@@ -14,6 +14,7 @@
           :data-tld="contact.email.tld"
           @click="$emailSpamProtect(contact.email.name, contact.email.domain, contact.email.tld)"
         >
+          {{ contact.email.name }}(at){{ contact.email.domain }}.{{ contact.email.tld }}
         </a>
       </span>
     </div>

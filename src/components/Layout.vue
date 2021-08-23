@@ -2,7 +2,7 @@
   <div class="container mx-auto p-2">
     <BreakPoints v-if="developerMode" />
     <SelectComponents v-if="selectedComponents" :components="components" />
-    <PrintButton :print-mode="printMode" @click="setPrintMode()" />
+    <!--<PrintButton :print-mode="printMode" @click="setPrintMode()" />-->
     <Print v-if="printMode" :components="components" />
     <Grid v-else :components="components" />
   </div>
@@ -15,14 +15,20 @@ import logo from "../assets/logo.svg"
 
 import SelectComponents from "./ui/SelectComponents.vue"
 import BreakPoints from "./helpers/Breakpoints.vue"
-import PrintButton from "./ui/ButtonPrint.vue"
+// import PrintButton from "./ui/ButtonPrint.vue"
 import Grid from "./layout/Grid.vue"
 import Print from "./layout/Print.vue"
 import { PrintModeStore } from "../store/printMode"
 
 export default defineComponent({
   name: "Layout",
-  components: { BreakPoints, SelectComponents, PrintButton, Grid, Print },
+  components: {
+    BreakPoints,
+    SelectComponents,
+    // PrintButton,
+    Grid,
+    Print
+  },
   setup() {
     const printModeStore: PrintModeStore | undefined = inject("printModeStore")
     const printMode = computed(() => printModeStore?.state.printMode)

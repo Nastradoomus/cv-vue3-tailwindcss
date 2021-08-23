@@ -7,14 +7,14 @@
       </button>
     </template>
     <template v-else>
-      <div class="sm:grid sm:grid-cols-2 pb-3 pt-1">
-        <div v-for="(e, i) in experience" :key="i">
+      <div class="sm:grid sm:grid-cols-2 sm:gap-2 pb-3 pt-1">
+        <div v-for="(e, i) in experience" :key="i" class="pb-3">
           <div class="text-lg pt-2 pb-1 text-center">
             <a v-if="e.url" :href="e.url" class="font-bold"> {{ e.title }}</a>
-            <h3 v-else class="inline-block">{{ e.title }}</h3>
+            <h3 v-else class="inline-block py-0">{{ e.title }}</h3>
             <span class="whitespace-nowrap text-lg tracking-widest"> ( {{ e.year }} )</span>
           </div>
-          {{ e.content }}
+          <div v-html="e.content" />
         </div>
       </div>
     </template>

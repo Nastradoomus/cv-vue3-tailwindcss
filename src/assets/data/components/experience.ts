@@ -11,66 +11,54 @@ export const experience: Experience = [
     url: "https://skumppa.fi",
     year: "2019 →",
     content:
-      "Meidän oma perheyritys. Jatkoa Helppo Elämälle: Veneilysesongin aikaan veneiden sekä perämoottoreiden huoltoa ja korjausta. Muuten koodausta, apua pienyritysten hankintoihin sekä muihin tietoteknisiin ratkaisuihin. Kirjanpidosta on myös kertynyt kokemusta."
+      "Perheomisteinen Osakeyhtiö jonka avulla voimme tehdä vapaasti töitä omilla aikatauluilla. " +
+      "Yhtiön tarkoitus on myös opettaa lapsillemme yrityskulttuuria" +
+      "<br /><br />" +
+      "Omiin työtehtäviin on kuulunut kaikki hallinnolliset asiat kuten kirjanpito, verotukseen liittyvät asiat sekä taloudenhallinta. " +
+      "<br /><br />" +
+      "Lisäksi teen sekä B2B että B2C töitä veneiden, moottoreiden, juhlien järjestämisen, " +
+      "ohjelmoinnin sekä tietoteknisten ohjelmistojen ja ratkaisuiden parissa."
   },
   {
     title: "Helppo Elämä",
     url: "https://helppoelämä.fi",
     year: "2012 - 2019",
     content:
-      "Veneilysesongin aikaan veneiden sekä perämoottoreiden huoltoa ja korjausta. Muuten koodausta, apua pienyritysten hankintoihin sekä muihin tietoteknisiin ratkaisuihin."
+      "Helppoelämä on nykyään Skumppa Oy:n aputoiminimi. Teimme avopuolison kanssa ensin töitä omilla toiminimillä, " +
+      "mutta päätimme yhdistää nämä kaksi." +
+      "<br /><br />" +
+      "Työtehtävät olivat samoja kuin Skumppa Oy:ssä"
   },
   {
     title: "MPA Helsinki Oy / Molotw Finland / Geezers.fi",
     url: "https://geezers.fi",
     year: "2009 - 2012",
     content:
-      "Taidetarviketukku, vähittäiskauppa sekä verkkokauppa. Myynti-, varasto- sekä koodaustyötä."
+      "MPA Helsinki Oy tuo maahan korkeatasoisia taidetarvikkeita mm. Saksasta. " +
+      "<br /><br />" +
+      "Geezers the Shop on tämän yrityksen verkkokauppa, joka aloitti ensin kivijalkaliikkeenä Helsingissä. " +
+      "Nykyisen kivijalkaliikkeen nimi on " +
+      "<a href='https://www.google.com/maps/place/Molotow+Helsinki+(Molotow+Finland)/@60.1929063,24.9481874,15z/data=!4m5!3m4!1s0x0:0x6db7597c9e28c009!8m2!3d60.1930832!4d24.9484811'>Molotow Helsinki</a>. " +
+      "<br /><br />" +
+      "Tein Geezers the Shop sekä töitä sekä verkkokaupan että kivijalkaliikkeen puolella. Työtehtäviin kuului kaikkea mitä pienyrityksen kaupan pitoon kuuluu." +
+      "Hyllytystä, asiakaspalvelua, tietoteknistä apua, koodaamista, varastotyötä. " +
+      "<br /><br />" +
+      "Paljon tuli opittua myös yrityksen pyörittämisestä."
   },
   {
-    title: "LSH-Juhlatalo Oy (Ravintola Helmi)",
+    title: "Muut työtehtävät",
     url: undefined,
-    year: "2009 - 2011",
+    year: "1998 - 2011",
     content:
-      "Yökerho / Anniskeluravintola. Työnkuvaan kuului plokkausta, tiskausta, järjestelyä sekä myyntiä."
-  },
-  {
-    title: "Oy Grundfoss Environment Finland Ab",
-    url: "https://www.grundfos.com",
-    year: "2007 - 2008",
-    content: "MUUTA!"
-  },
-  {
-    title: "Tronepa Oy, Staffpoint",
-    url: undefined,
-    year: "2006",
-    content:
-      "Erilaisia varastotöitä sekä anniskeluravintoloissa työskentelyä.Erilaisia varastotöitä sekä anniskeluravintoloissa työskentelyä."
-  },
-  {
-    title: "K.Hartwall Oy Ab",
-    url: "https://k-hartwall.com/",
-    year: "2004 - 2005",
-    content:
-      "Robottihitsaaja. Alkoi ensin kesätyönä, mutta jatkui ensin määräaikaisena, muuttuen myöhemmin kokoaikaiseksi."
-  },
-  {
-    title: "Sabik Oy",
-    url: undefined,
-    year: "15 – 24.8.2001",
-    content: "Kemi-Tornio moottoritien elektronisten nopeuskylttien asennus keikkatyönä."
-  },
-  {
-    title: "Sipoon Vene ja Moottori",
-    url: "https://sipoonvenejamoottori.fi",
-    year: "2000 - 2001",
-    content:
-      "Veneiden sekä perämoottereiden huoltoa ja korjausta kesäisin sekä osa-aikaisena opintojen ohella."
-  },
-  {
-    title: "Miettinen Veljekset Oy ",
-    url: undefined,
-    year: "1998 - 1999",
-    content: "Opintojen ohella osa-aikaisena kioskikahvilatyöntekijänä."
+      "Työkokemusta on tullut myös monesta muusta paikasta. Olen toiminut mm. Ravintola Helmessä plokkarina sekä baarityöntekijänä. " +
+      "Yökerhossa työskentely on tuonut mukanaan rutkasti paineensietokykyä, sillä työympäristö oli välillä suorastaan hektinen. " +
+      "<br /><br />" +
+      "<a href='Oy Grundfoss Environment Finland Ab'>Grundfossilla</a> vesi- sekä viemäripumppujen kokoonpanijana että testaajana. " +
+      "<br /><br />" +
+      "Erilaisissa varastotöissä työvoimavuokrausyritysten kautta, " +
+      "<br /><br />" +
+      "<a href='https://k-hartwall.com/'>K. Hartwall Oy Ab</a> automaattirobottihitsaajana " +
+      "<br /><br />" +
+      "sekä kahvilatyöntekijänä pienessä kioskikahvilassa."
   }
 ]

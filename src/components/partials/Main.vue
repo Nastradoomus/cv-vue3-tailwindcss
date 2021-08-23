@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center pb-2">
+  <div class="text-center pb-3">
     <h1 class="tracking-widest">{{ main.name }}</h1>
     <h2 class="font-normal">
       <span v-for="(title, i) in main.titles" :key="title + i"
