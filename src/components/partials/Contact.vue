@@ -32,18 +32,31 @@
       >{{ email.name }}(at){{ email.domain }}.{{ email.tld }}
     </a>
     <h3>Verkko</h3>
-    <a v-for="(w, i) in contact.web" :key="i" :href="w.url" class="block pl-1">
-      {{ w.title }}
-    </a>
+    <template v-for="(w, i) in contact.web" :key="i" :href="w.url">
+      <div v-if="printMode">{{ $stripHttps(w.url) }}</div>
+      <a v-if="!printMode" class="block pl-1">
+        {{ w.title }}
+      </a>
+    </template>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
+import { defineComponent, inject } from "vue"
+
+import { PrintModeStore } from "../../store/printMode"
 import { contact, Contact } from "../../assets/data/components/contact"
 
 export default defineComponent({
   name: "Contact",
+  setup() {
+    const printModeStore: PrintModeStore | undefined = inject("printModeStore")
+    let printMode
+    if (printModeStore?.state) {
+      printMode = printModeStore.state.printMode
+    }
+    return { printMode }
+  },
   data(): { contact: Contact } {
     return {
       contact

@@ -1,32 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-/* ./src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  h1 {
-    @apply text-4xl pb-1 font-bold tracking-widest;
-    font-variant: small-caps;
-  }
-  h2 {
-    @apply text-2xl font-semibold tracking-widest py-2;
-    font-variant: small-caps;
-  }
-  h3 {
-    @apply font-bold pt-2 pb-1;
-  }
-  a {
-    @apply text-blue-900 transition-all duration-300 ease-in-out;
-  }
-  a:hover,
-  a:active {
-    @apply text-blue-600 font-bold underline transition-all duration-300 ease-in-out;
-  }
-  button {
-    @apply ripple-bg-white px-2 py-1 rounded-xl border;
-  }
+h1 {
+  @apply text-4xl pb-1 tracking-widest;
+  font-variant: small-caps;
+}
+h2 {
+  @apply text-2xl font-semibold tracking-widest py-2;
+  font-variant: small-caps;
+}
+h3 {
+  @apply font-bold pt-2 pb-1;
+}
+a {
+  @apply text-blue-900 transition-all duration-300 ease-in-out;
+}
+a:hover,
+a:active {
+  @apply text-blue-600 font-bold underline transition-all duration-300 ease-in-out;
+}
+button {
+  @apply bg-white px-2 py-1 rounded-xl border;
 }
 
 /* style sheet for "A4" printing */
@@ -45,3 +38,17 @@
     }
  }
  */
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}
+.pagebreak {
+  break-after: always;
+  page-break-after: always;
+}
+.forcepagebreak {
+  page-break-before: always;
+}

@@ -1,5 +1,5 @@
 # Manne Muoniovaara Curriculum Vitae
 
-## Vue 3 + Typescript + Vite + TailwindCSS
+## Vue 3 + Typescript + Vite + WindiCSS
 
-### Airbnb, ESLint, Prettier, Vetur
+### Airbnb, ESLint, Prettier, Volar

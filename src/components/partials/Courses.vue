@@ -31,12 +31,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
+import { defineComponent, inject } from "vue"
+import { PrintModeStore } from "../../store/printMode"
 import { courses, Courses } from "../../assets/data/components/courses"
 
 export default defineComponent({
   name: "Courses",
-
+  setup() {
+    const printModeStore: PrintModeStore | undefined = inject("printModeStore")
+    let printMode
+    if (printModeStore?.state) {
+      printMode = printModeStore.state.printMode
+    }
+    return { printMode }
+  },
   data(): { courses: Courses } {
     return {
       courses

@@ -37,7 +37,7 @@ export const contact: Contact = {
   web: [
     {
       title: "GitHub",
-      url: "https://github.com/Nastradoomus/"
+      url: "https://github.com/nastradoomus"
     },
     {
       title: "Helppo Elämä",

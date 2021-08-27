@@ -22,7 +22,7 @@
     <Tags />
   </div>
   <div class="text-center">
-    <a href="https://github.com/Nastradoomus/cv-vue3-tailwindcss">Lähdekoodit GitHubissa</a>
+    <a href="https://github.com/Nastradoomus/cv-vue3-windi">Lähdekoodit GitHubissa</a>
   </div>
 </template>
 

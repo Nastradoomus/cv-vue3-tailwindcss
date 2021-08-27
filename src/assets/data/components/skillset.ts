@@ -3,7 +3,7 @@ interface Title {
   url: string | undefined
 }
 
-interface Skill {
+export interface Skill {
   titles: Title[]
   rating: number | undefined
   content: string | undefined
@@ -24,7 +24,7 @@ export const skillset: Skillset = [
       "Ensikosketus JavaScriptiin oli <a href='https://jquery.com/'>jQuery</a>, jolla oli helppoa tehdä ensimmäisiä " +
       "<a href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents'>DOM</a> manipulaatioita. " +
       "<br /><br />" +
-      "Jonkin ajan kuluttua puhdas JavaScript. " +
+      "Jonkin ajan kuluttua mukaan tuli puhdas JavaScript. " +
       "Lähtisin erittäin mielelläni projekteihin kirjoittamaan myös puhdasta JavaScriptiä ilman kirjastoja." +
       "<div  class='font-bold pb-1 pt-2'>Itsearvio:</div>" +
       "<ul class='pl-2'>" +

@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-      class="fixed bottom-2 right-2"
+      class="fixed bottom-2 right-2 no-print"
       :class="{
         'text-green-500 border-green-500': printMode,
         'text-red-500 border-red-500': !printMode

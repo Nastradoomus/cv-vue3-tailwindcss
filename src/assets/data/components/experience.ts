@@ -11,7 +11,7 @@ export const experience: Experience = [
     url: "https://skumppa.fi",
     year: "2019 →",
     content:
-      "Perheomisteinen Osakeyhtiö jonka avulla voimme tehdä vapaasti töitä omilla aikatauluilla. " +
+      "Perheomisteinen osakeyhtiö jonka avulla voimme tehdä vapaasti töitä omilla aikatauluilla. " +
       "Yhtiön tarkoitus on myös opettaa lapsillemme yrityskulttuuria" +
       "<br /><br />" +
       "Omiin työtehtäviin on kuulunut kaikki hallinnolliset asiat kuten kirjanpito, verotukseen liittyvät asiat sekä taloudenhallinta. " +

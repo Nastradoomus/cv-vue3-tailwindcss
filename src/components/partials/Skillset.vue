@@ -1,12 +1,41 @@
 <template>
   <div class="pb-3 pt-1">
     <h2 class="text-center">Osaaminen</h2>
-    <div class="sm:flex sm:flex-wrap sm:justify-center pb-3 pt-1">
+    <div v-if="printMode">
+      <div
+        v-for="(skills, j) in splittedSkillset"
+        :key="j"
+        :class="{ pagebreak: j < splittedSkillset.length - 2 }"
+      >
+        <div class="flex">
+          <div
+            v-for="skill in skills"
+            :key="skill.titles[0].title"
+            class="text-center cell mt-3 mb-1 sm:mx-2"
+            :class="{ lastChild: skills.length === 1 }"
+          >
+            <span v-for="(title, y) in skill.titles" :key="y" class="text-lg font-bold pt-3 pb-1">
+              <a v-if="title.url" :href="title.url">{{ title.title }}</a>
+              <span v-else>{{ title.title }}</span>
+              <span v-if="y < skill.titles.length - 1"> / </span>
+            </span>
+            <div v-if="skill.rating" class="grid justify-items-center -mt-2 -mb-1">
+              <div class="stars" :style="setLevel(skill.rating)">
+                &starf;&starf;&starf;&starf;&starf;
+              </div>
+            </div>
+            <div v-else>&nbsp;</div>
+            <div class="text-left" v-html="skill.content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div v-if="!printMode" class="sm:flex sm:flex-wrap sm:justify-center pb-3 pt-1">
       <div
         v-for="(skill, i) in skillset"
         :key="skill.titles[0].title"
         class="text-center cell mt-3 mb-1 sm:mx-2"
-        :class="{ lastChild: i == skillset.length - 1 }"
+        :class="{ lastChild: i === skillset.length - 1 }"
       >
         <span v-for="(title, y) in skill.titles" :key="y" class="text-lg font-bold pt-3 pb-1">
           <a v-if="title.url" :href="title.url">{{ title.title }}</a>
@@ -26,15 +55,42 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue"
-import { skillset, Skillset } from "../../assets/data/components/skillset"
+import { defineComponent, inject } from "vue"
+import cloneDeep from "lodash.clonedeep"
+import { PrintModeStore } from "../../store/printMode"
+import { skillset, Skillset, Skill } from "../../assets/data/components/skillset"
 
 export default defineComponent({
   name: "Skillset",
-
+  setup() {
+    const printModeStore: PrintModeStore | undefined = inject("printModeStore")
+    let printMode
+    if (printModeStore?.state) {
+      printMode = printModeStore.state.printMode
+    }
+    return { printMode }
+  },
   data(): { skillset: Skillset } {
     return {
       skillset
+    }
+  },
+  computed: {
+    splittedSkillset() {
+      const clone: Skillset = cloneDeep(this.skillset)
+      const result = clone.reduce(
+        (resultArray: Array<Array<Skill>>, item: Skill, index: number) => {
+          const i = Math.floor(index / 2)
+          if (!resultArray[i]) {
+            // eslint-disable-next-line no-param-reassign
+            resultArray[i] = []
+          }
+          resultArray[i].push(item)
+          return resultArray
+        },
+        []
+      )
+      return result
     }
   },
   methods: {
