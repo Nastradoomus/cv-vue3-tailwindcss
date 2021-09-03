@@ -34,7 +34,7 @@
     <h3>Verkko</h3>
     <template v-for="(w, i) in contact.web" :key="i" :href="w.url">
       <div v-if="printMode">{{ $stripHttps(w.url) }}</div>
-      <a v-if="!printMode" class="block pl-1">
+      <a v-if="!printMode" class="block pl-1" :href="w.url">
         {{ w.title }}
       </a>
     </template>
